@@ -1,0 +1,41 @@
+.correctAnswer {
+  padding: 5px 10px;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0px;
+
+  background: $color3;
+  border-radius: $BR-Middle;
+}
+
+.text {
+  @include text(20px, 600, 1);
+}
+
+.answer {
+  display: flex;
+
+  @include text(20px, 600, 1);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.ton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.letter {  
+  white-space: pre-wrap;
+}

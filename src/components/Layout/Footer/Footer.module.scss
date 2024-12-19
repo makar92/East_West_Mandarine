@@ -1,0 +1,27 @@
+.footer {
+  padding: 10px;
+
+  background-color: $BGColor2;
+  color: $ColorText1;
+
+  & a {
+    color: $ColorText1;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.social {
+  font-size: 30px;
+}

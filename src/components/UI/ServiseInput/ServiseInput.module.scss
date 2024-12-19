@@ -1,0 +1,8 @@
+.serviseInput {
+  width: 100%;
+  padding: 10px 16px;
+
+  border-radius: $BR-Middle;
+  
+  @include text(20px, 600, 1.0);
+}

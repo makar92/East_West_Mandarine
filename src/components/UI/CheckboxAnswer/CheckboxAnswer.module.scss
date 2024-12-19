@@ -1,0 +1,41 @@
+.button {
+  height: 40px;
+  padding: 0px 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  color: $ColorText1;
+  border-radius: $BR-Small;
+  cursor: pointer;
+
+  @include text(20px, 600, 1);
+}
+
+.isWait {
+  background: #5b5b5b;
+  @media (min-width: 768px) {
+    &:hover {
+      background: #454545;
+    }
+  }
+  &:active {
+    background: #6c6c6c;
+  }
+}
+
+.checked {
+  background-color: #0a4e4f;
+}
+
+.isRight {
+  background-color: #145e22;
+  transition: background-color 0.5s ease 0.25s;
+}
+
+.isWrong {
+  background-color: #5e1814;
+  transition: background-color 0.5s ease 0.25s;
+}

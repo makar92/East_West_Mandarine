@@ -1,0 +1,38 @@
+.button {
+  height: 40px;
+  padding: 0px 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: $ColorText1;
+  border-radius: $BR-Small;
+  cursor: pointer;
+
+  @include text(20px, 600, 1);
+}
+
+.isWait {
+  background: $BGColor3;
+  
+  @media (min-width: 768px) {
+    &:hover {
+      background: darken($BGColor3, 5%);
+    }
+  }
+  &:active {
+    background: darken($BGColor3, 3%);
+  }
+}
+
+.isSelected {
+  background: darken($BGColor3, 7%);
+}
+
+.isNotSelected {
+  background: lighten($BGColor3, 50%);
+}
+
+

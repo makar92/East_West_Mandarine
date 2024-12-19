@@ -1,0 +1,15 @@
+.coursesBlock {
+  padding: 50px 0px;
+}
+
+.title {
+  margin: 0px 0px 20px 0px;
+
+  @include text(30px, 600, 150%);
+  color: $ColorText1;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

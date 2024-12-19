@@ -1,0 +1,14 @@
+.icon {
+  font-size: 24px;
+  color: $color1;
+  transition: opacity 0.3s ease 0s;
+  
+  @media (min-width: 768px) {
+    &:hover {
+      opacity: 80%;
+    }
+  }
+  &:active {
+    opacity: 100%;
+  }
+}

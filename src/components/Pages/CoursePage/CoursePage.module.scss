@@ -1,0 +1,43 @@
+.coursePage {
+  padding: 20px 0px;
+}
+
+.courseName {
+  margin: 0px 0px 20px 0px;
+
+  color: $ColorText1;
+  @include text(30px, 600, 100%);
+  text-align: center;
+}
+
+.controlPanel {
+  position: relative;
+  margin: 0px 0px 20px 0px;
+  padding: 5px 0px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+
+  border-top: $Border1;
+  border-bottom: $Border1;
+}
+
+.stepsCount {
+  color: $ColorText1;
+  @include text(20px, 600, 100%);
+}
+
+.paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

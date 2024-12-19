@@ -1,0 +1,38 @@
+.button {
+  height: 40px;
+  padding: 0px 20px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  color: aliceblue;
+  border-radius: $BR-Small;
+  cursor: pointer;
+
+  @include text(20px, 600, 1);
+}
+
+.isWait {
+  background: $BGColor3;
+  
+  @media (min-width: 768px) {
+    &:hover {
+      background: darken($BGColor3, 5%);
+    }
+  }
+  &:active {
+    background: darken($BGColor3, 3%);
+  }
+}
+
+.isRight {
+  background-color: $IsRightColor;
+  transition: background-color 0.5s ease 0.25s;
+}
+
+.isWrong {
+  background-color: $IsWrongColor;
+  transition: background-color 0.5s ease 0.25s;
+}

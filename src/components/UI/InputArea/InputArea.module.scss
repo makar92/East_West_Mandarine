@@ -1,0 +1,12 @@
+.InputArea {
+  width: 100%;
+  padding: 10px 16px;
+
+  border-radius: $BR-Middle;
+  @include text(20px, 600, 1.0);
+
+  overflow: auto;
+  resize: vertical;
+  min-height: 200px;
+  max-height: 500px;
+}

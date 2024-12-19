@@ -1,0 +1,48 @@
+.letterAndTon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 0px;
+}
+
+.ton {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: $BR-Small;
+  color: $ColorText1;
+  
+  text-align: center;
+  @include text(30px, 400, 1);
+}
+
+.activ {
+  background: $ColorText1;
+  @media (min-width: 768px) {
+    &:hover {
+      background: mix($ColorText1, black, 80%);
+    }
+  }
+}
+
+.passive {
+  background: transparent;
+  visibility: hidden;
+}
+
+.transparent {
+  background: transparent;
+}
+
+.letter {
+  @include text(80px, 600, 1);
+  white-space: pre-wrap;
+}
+
+
+

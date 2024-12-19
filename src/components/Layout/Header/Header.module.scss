@@ -1,0 +1,52 @@
+.header {
+  padding: 10px 0px;
+
+  color: $ColorText1;
+  background-color: $BGColor2;
+
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+
+    color: $ColorText1;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+} 
+
+.nuv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+
+  & li {
+    list-style: none
+  }
+}
+
+.icon {
+  font-size: 24px;
+  color: $color1;
+  transition: opacity 0.3s ease 0s;
+  
+  @media (min-width: 768px) {
+    &:hover {
+      opacity: 80%;
+    }
+  }
+  &:active {
+    opacity: 100%;
+  }
+}
+
+

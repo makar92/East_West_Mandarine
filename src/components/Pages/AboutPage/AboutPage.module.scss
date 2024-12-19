@@ -1,0 +1,59 @@
+.header {
+  margin: 0px 0px 20px 0px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.title {
+  @include titlePage;
+}
+
+
+
+.blocks {
+  margin: 0px 0px 50px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  column-gap: 40px;
+  align-items: stretch;
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.image {
+  width: 300px;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.text {
+  width: 100%;
+  @include text(20px, 400, 1.2);
+ 
+  display: flex;
+  //justify-content: center;
+  align-items: center;
+}
+
+.textBlock {
+  margin: 0px 0px 50px 0px;
+  @include text(20px, 400, 1.2);
+  text-align: center;
+}
+
+.youTubePlayer {
+  margin: 0px 0px 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

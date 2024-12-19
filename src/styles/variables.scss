@@ -1,0 +1,260 @@
+//----- Colors -----
+$BGColor1: #1D2F30;
+$BGColor2: #0B1919;
+$BGColor3: #5b5b5b;
+$BGColor4: #222222;
+
+$BGColor5: #121227;
+$BGColor6: #3c4616;
+$BGColor7: #0000004e; //module bg
+
+$IsRightColor: #145e22;
+$IsWrongColor: #5e1814;
+
+$color1: #BAE249;
+$color2: #c56a1f;
+$color3: #ccbe7c;
+
+$ColorText1: white;
+$ColorLink1: #42c3ff;
+
+//----- Borders -----
+$BR-Small: 5px;
+$BR-Middle: 10px;
+$BR-Big: 20px;
+
+$Border1: 1px solid #ffffff;
+$Border2: 2px solid $color2;
+$Border3: 2px solid #ffffff;
+
+//----- mixins -----
+@mixin text($fz, $fw, $lh) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin titlePage {
+  padding: 20px 0px;
+  width: 100%;
+  color: $ColorText1;
+  @include text(30px, 600, 100%);
+  text-align: center;
+}
+
+@mixin editor {
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    @include text(20px, 600, 150%)
+  }
+
+
+
+  .input {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 10px;
+    @include text(20px, 400, 150%)
+  }
+
+  .footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+}
+
+@mixin EditorBlock {
+  width: 100%;
+  padding: 10px 0px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .close {
+    @include close;
+  }
+
+  .text {
+    color: $ColorText1;
+    @include text(20px, 600, 1);
+  }
+
+  .icon {
+    margin: 0px 6px 6px 0px;
+    display: flex;
+    justify-content: end;
+
+    &__image {
+      text-align: center;
+      color: $ColorText1;
+      @include text(20px, 400, 1);
+    }
+  }
+
+  .buttonSave {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@mixin PininField {
+  padding: 10px;
+  width: 100%;
+  height: 160px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3px;
+
+  border-radius: $BR-Middle;
+  background: $BGColor3;
+  text-align: center;
+}
+
+@mixin PininAnswers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+@mixin close {
+  font-size: 26px;
+}
+
+@mixin WithoutArrows {
+
+  /* Убираем стрелки в Chrome, Safari, Edge и других WebKit-браузерах */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Убираем стрелки в Firefox */
+  -moz-appearance: textfield;
+}
+
+//Ограничение строк:
+@mixin LineClamp($N) {
+  -webkit-line-clamp: $N;
+  line-clamp: $N;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+//Для страниц в админке:
+
+@mixin adminBlock {
+  padding: 20px 10px;
+
+  background: $BGColor4;
+  border-radius: $BR-Middle;
+  border: $Border1;
+}
+
+
+@mixin adminPage {
+  @include adminBlock;
+
+  .h2 {
+    margin: 0px 0px 30px 0px;
+    @include text(24px, 600, 1);
+  }
+
+  .dataModules {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+
+@mixin nuvItem {
+  padding: 5px 5px;
+  width: 100%;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $BGColor6;
+  border-radius: $BR-Small;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+  &_active {
+    background-color: lighten($BGColor6, 20%);
+
+    @media (min-width: 768px) {
+      &:hover {
+        background-color: lighten($BGColor6, 20%);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:hover {
+      background-color: lighten($BGColor6, 20%);
+    }
+  }
+
+}
+
+@mixin nuvItemFull {
+  @include nuvItem;
+
+  & .icon {
+    font-size: 12px;
+  }
+
+  & .text {
+    @include text(14px, 600, 1);
+  }
+
+  & .settings {
+    display: flex;
+    column-gap: 3px;
+  }
+}
+
+@mixin creatorFooter {
+  height: 50px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  background: $BGColor6;
+  color: $ColorText1;
+
+  &__text {
+    flex: 1 0 auto;
+    @include text(20px, 600, 100%);
+    text-align: center;
+  }
+}
